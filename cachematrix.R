@@ -9,9 +9,9 @@ makeCacheMatrix <- function(x = matrix()) {
                 x <<- y
                 m <<- NULL
         } #defines function that assigns y to x and make m Null again
-        get <- function() x # function that prints value of x in this environment?
-        setinverse <- function(inverse) m <<- inverse #function that assigns input (mean) to m in other environment
-        getinverse <- function() m # function that prints value of m in this environment?
+        get <- function() x # function that prints value of x
+        setinverse <- function(inverse) m <<- inverse #function that assigns input (mean) to m in makeCacheMatrix
+        getinverse <- function() m # function that prints value of m
         list(set = set, get = get,  
              setinverse = setinverse,
              getinverse = getinverse) #returns list
